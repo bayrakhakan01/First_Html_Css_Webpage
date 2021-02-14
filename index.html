@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CSS Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">New</a></li>
+            <li><a href="#contact">Contract</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+            <li class="topnav-right"><a href="#signin">Sign In</a></li>
+            <!-- we are going to create a hamburger menu 
+              -- we are going to find code via https://unicode-table.com/en/  searce"Trigram " 
+            -->
+            <!--javascript:void(0) means we are telling browser the path you are going to is undefined so just stay on the page that you are on    -->
+            <li class="dropdownIcon"><a href="javascript:void(0)" onclick="dropdownMenu()">&#9776;</a></li>
+        </ul> 
+
+    </nav>
+    <div class="container"  id="section-1-gradient">
+        <div class="row">
+            <div class="col-6">
+                <div class="leftSide-col">
+                    <h1 class="large">Crazy Redness</h1>
+                    <h1 class="large">Made for Devslopers</h1>
+                </div>
+                <form>
+                    <div class="leftSide-col">
+                        <h2>Username</h2>
+                        <input type="text"  name="username" class="inputbox" placeholder="Username">
+                        <h2>Password</h2>
+                        <input type="text"  name="password" class="inputbox" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="rightSide-col">
+                    <div class="videoContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/d4Zb4f4rnL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1 class="section2Header">The Standards of Awesomeness</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                        <img src="devicon.png" alt="devicon">
+                    </div>
+                    <label >Chat with me</label>
+                    <!-- lorem ipsum generator -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                    <img src="devicon.png" alt="devicon">
+                    </div>
+                    <label >Learn to Code</label>
+                    <!-- lorem ipsum generator -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.
+                    </p>             
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                    <img src="devicon.png" alt="devicon">
+                    </div>
+                    <label >Build an Empire</label>
+                    <!-- lorem ipsum generator -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12">
+                <button class="learnMore">Learn More</button>
+           
+        </div>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.</p>
+                </article>
+            </div>
+            <div class="col-5">
+                <div class="slopeIcon">
+                    <img src="iOS-Slope.png" alt="iOS-Slope"> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footsy">
+        <div class="row">
+            <div class="col-3 mobileStack">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Blogs</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Blogs</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Blogs</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Blogs</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function dropdownMenu() {
+            let dropdownClick = document.getElementById('dropdownClick');
+
+            if (dropdownClick.className === 'topnav') {
+                dropdownClick.className += ' responsive';
+                /* change topnav to topnav.responsive */
+               
+            } else {
+                dropdownClick.className = 'topnav';
+            }
+
+        }
+
+    </script>
+</body>
+</html>
